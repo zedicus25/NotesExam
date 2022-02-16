@@ -17,12 +17,13 @@ c_Note::c_Note(string note, string name, string kategory, c_Date* date)
 	delete date;
 }
 
-c_Note::c_Note(const c_Note& tmp) 
+c_Note::c_Note(c_Note*& tmp) 
 {
-	this->note = tmp.getNote();
-	this->name = tmp.getName();
-	this->category = tmp.getCategory();
-	this->date = new c_Date(tmp.getDate()->getDay(), tmp.getDate()->getMounth(), tmp.getDate()->getYear());
+	this->note = tmp->getNote();
+	this->name = tmp->getName();
+	this->category = tmp->getCategory();
+	this->date = new c_Date(tmp->getDate()->getDay(), tmp->getDate()->getMounth(), tmp->getDate()->getYear());
+	//delete &tmp;
 }
 
 void c_Note::setName(string name)

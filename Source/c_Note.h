@@ -11,7 +11,7 @@ private:
 public:
 	c_Note();
 	c_Note(string note, string name, string category, c_Date* date);
-	c_Note(const c_Note& tmp);
+	c_Note(c_Note*& tmp);
 
 	void setName(string name);
 	void setNote(string note);
