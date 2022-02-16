@@ -39,7 +39,6 @@ public:
 	~c_Notebook()
 	{
 		this->saveToFile();
-		this->notes.clear();
 	}
 };
 

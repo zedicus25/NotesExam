@@ -137,6 +137,7 @@ void c_Notebook::editNote(size_t id)
 				string name;
 				string category;
 				string note;
+				std::cin.ignore();
 				cout << "Enter name: ";
 				std::getline(std::cin, name);
 				(*it)->setName(name);
@@ -149,7 +150,6 @@ void c_Notebook::editNote(size_t id)
 				int d = 0, m = 0, y = 0;
 				cout << "Enter date in format(d m y) ";
 				std::cin >> d >> m >> y;
-				std::cin.ignore();
 				(*it)->setDate(d, m, y);
 			}
 			return;
@@ -170,6 +170,7 @@ void c_Notebook::editNote(string name)
 				string name;
 				string category;
 				string note;
+				std::cin.ignore();
 				cout << "Enter name: ";
 				std::getline(std::cin, name);
 				(*it)->setName(name);
@@ -182,7 +183,6 @@ void c_Notebook::editNote(string name)
 				int d = 0, m = 0, y = 0;
 				cout << "Enter date in format(d m y) ";
 				std::cin >> d >> m >> y;
-				std::cin.ignore();
 				(*it)->setDate(d, m, y);
 			}
 			return;
