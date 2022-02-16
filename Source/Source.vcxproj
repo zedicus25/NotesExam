@@ -141,11 +141,13 @@
   <ItemGroup>
     <ClCompile Include="c_Date.cpp" />
     <ClCompile Include="c_Note.cpp" />
+    <ClCompile Include="c_Notebook.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="c_Date.h" />
     <ClInclude Include="c_Note.h" />
+    <ClInclude Include="c_Notebook.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
