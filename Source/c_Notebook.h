@@ -7,23 +7,33 @@ using std::cout;
 class c_Notebook
 {
 private:
-	list<c_Note> notes;
+	list<c_Note*> notes;
+	string viewNote(c_Note* note);
+	bool rightCategory(c_Note& note, string category) {
+		return note.getCategory() == category;
+	}
 public:
-	c_Notebook();
+	c_Notebook() {
 
-	void addNote();
+	}
 
-	void removeNote(size_t id);//remove one note
-	void removeNote(string name);//remove one note
-	void removeNote(c_Date* date, bool all);//remove first note wirh date or all note with date
-	void removeKategory(string kategory);//remove all notes in kategory
-	void removeAllNotes();//remove all notes
+	void addNote(c_Note* note);
+
+	void removeNote(size_t id);
+	void removeNote(string name);
+	void removeNote(c_Date* date, bool all);
+	void removeCategory(string category);
+	void removeAllNotes();
 
 	void editNote(size_t id);
 	void editNote(string name);
 	void editNote(c_Date* date, string name);
-	void editKategory(string kategory);
-	void editDate(c_Date* date, string name);
+	void editCategory(string oldCategory, string newCategory);
+
+	void showAllNotes();
+	void showByCategory(string category);
+	void showByDate(c_Date* date);
+	void showById(size_t id);
 
 	void saveToFile();
 	void readFromFile();
